@@ -9,9 +9,9 @@ const App = () => {
   }, []);
 
   const [card, setCard] = useState([]);
-  
+
   function fetchData() {
-    axios.get("http://localhost:3000/api/card").then((res) => {
+    axios.get("/api/card").then((res) => {
       console.log(res.data.cards);
       setCard(res.data.cards);
     });
